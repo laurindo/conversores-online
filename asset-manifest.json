@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/conversores-online/static/css/main.49360507.chunk.css",
-    "main.js": "/conversores-online/static/js/main.c04a43ae.chunk.js",
-    "main.js.map": "/conversores-online/static/js/main.c04a43ae.chunk.js.map",
+    "main.js": "/conversores-online/static/js/main.7514ed85.chunk.js",
+    "main.js.map": "/conversores-online/static/js/main.7514ed85.chunk.js.map",
     "runtime-main.js": "/conversores-online/static/js/runtime-main.a4fb1342.js",
     "runtime-main.js.map": "/conversores-online/static/js/runtime-main.a4fb1342.js.map",
-    "static/js/2.4a071091.chunk.js": "/conversores-online/static/js/2.4a071091.chunk.js",
-    "static/js/2.4a071091.chunk.js.map": "/conversores-online/static/js/2.4a071091.chunk.js.map",
+    "static/js/2.02eb5ad0.chunk.js": "/conversores-online/static/js/2.02eb5ad0.chunk.js",
+    "static/js/2.02eb5ad0.chunk.js.map": "/conversores-online/static/js/2.02eb5ad0.chunk.js.map",
     "index.html": "/conversores-online/index.html",
-    "precache-manifest.ba631b3aa6570b838331ac698fd9b1bb.js": "/conversores-online/precache-manifest.ba631b3aa6570b838331ac698fd9b1bb.js",
+    "precache-manifest.4c8d8a07a860bd45183bd2a808adb787.js": "/conversores-online/precache-manifest.4c8d8a07a860bd45183bd2a808adb787.js",
     "service-worker.js": "/conversores-online/service-worker.js",
     "static/css/main.49360507.chunk.css.map": "/conversores-online/static/css/main.49360507.chunk.css.map",
-    "static/js/2.4a071091.chunk.js.LICENSE.txt": "/conversores-online/static/js/2.4a071091.chunk.js.LICENSE.txt"
+    "static/js/2.02eb5ad0.chunk.js.LICENSE.txt": "/conversores-online/static/js/2.02eb5ad0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a4fb1342.js",
-    "static/js/2.4a071091.chunk.js",
+    "static/js/2.02eb5ad0.chunk.js",
     "static/css/main.49360507.chunk.css",
-    "static/js/main.c04a43ae.chunk.js"
+    "static/js/main.7514ed85.chunk.js"
   ]
 }

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/conversores-online/precache-manifest.ba631b3aa6570b838331ac698fd9b1bb.js"
+  "/conversores-online/precache-manifest.4c8d8a07a860bd45183bd2a808adb787.js"
 );
 
 self.addEventListener('message', (event) => {
