@@ -32,10 +32,10 @@ function App() {
         <main>
           <HashRouter history={createBrowserHistory()}>
             <Switch>
-              <Route exact path="/#/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
-              <Route exact path="/#/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
-              <Route exact path="/#/coverter/kelvin-celsius" component={ConversorKtoC}/>
-              <Route exact path="/#/coverter/celsius-kelvin" component={ConversorCtoK}/>
+              <Route exact path="/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
+              <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
+              <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
+              <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
             </Switch>
           </HashRouter>
         </main>
