@@ -5,6 +5,7 @@ import TextoMaiusculoComp from "./TextoMaiusculoComp";
 import ConversorMoeda from "./ConversorMoeda";
 import InverterText from "./InverterText";
 import SortNames from "./SortNames";
+import GenerateRandomWord from "./GenerateRandomWord";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -146,18 +147,10 @@ class HomePage extends React.Component {
                         </div>
                     </div>
 
-                    <div className="card">
-                        <p className="title">Cripto Moedas</p>
+                    <div className="card center">
+                        <p className="title">Gerar palavra randômica</p>
                         <div className="column">
-                            <div className="list-moedas">
-                                {Object.values(this.state.cripto.quote).map((q, index) => (
-                                    <div key={index} className="items" style={{"background-color": index % 2 === 0 ? "#f1f2f3" : "aliceblue"}}>
-                                        <label>{this.state.cripto.keys[index]}</label>
-                                        &nbsp;
-                                        <label>{q["15m"]}</label>
-                                    </div>
-                                ))}
-                            </div>
+                            <GenerateRandomWord/>
                         </div>
                     </div>
                 </section>
@@ -217,21 +210,64 @@ class HomePage extends React.Component {
                 <footer>
                     <div>
                         <ol>
-                            <li>
-                            <a href="/conversores-online/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
-                            </li>
-                            <li>
-                            <a href="/conversores-online/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
-                            </li>
-                            <li>
-                            <a href="/conversores-online/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
-                            </li>
-                            <li>
-                            <a href="/conversores-online/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
-                            </li>
+                        <li>
+                        <a href="/#/converter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+                        </li>
+                        <li>
+                        <a href="/#/converter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+                        </li>
+                        <li>
+                        <a href="/#/converter/kelvin-celsius">Kelvin p/ Celsius</a>
+                        </li>
+                        <li>
+                        <a href="/#/converter/celsius-kelvin">Celsius p/ Kelvin</a>
+                        </li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <ol>
+                        <li>
+                        <a href="/#/cotacao/moeda?coin=USD">Dólar para Real</a>
+                        </li>
+                        <li>
+                        <a href="/#/cotacao/moeda?coin=EUR">Euro para Real</a>
+                        </li>
+                        <li>
+                        <a href="/#/cotacao/moeda?coin=GBP">Libra para Real</a>
+                        </li>
+                        <li>
+                        <a href="/#/cotacao/moeda?coin=CAD">Dolar Canadense para Real</a>
+                        </li>
+                        <li>
+                        <a href="/#/cotacao/moeda?coin=CAD">Mais Opções</a>
+                        </li>
+                        </ol>
+                    </div>
+
+                    <div>
+                        <ol>
+                        <li>
+                        <a href="/#/texto/total-caracteres">Total de Caracteres</a>
+                        </li>
+                        <li>
+                        <a href="/#/texto/voz-google">Voz do Google</a>
+                        </li>
+                        <li>
+                        <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
+                        </li>
+                        <li>
+                        <a href="/#/texto/maiusculo">Converter p/ minúsculo</a>
+                        </li>
+                        <li>
+                        <a href="/#/texto/inverter">Inverter Texto</a>
+                        </li>
                         </ol>
                     </div>
                 </footer>
+                <div className="f center">
+                    Conversor Online &bull; {new Date().getFullYear()} 
+                </div>
             </main>
         );
     }
