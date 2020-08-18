@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import VozGoogle from "./VozGoogle";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -10,6 +11,10 @@ class HomePage extends React.Component {
             from: "USD",
             to: "BRL",
             result: 0,
+            texto: {
+                text: "",
+                total: 0
+            },
             cripto: {
                 value: 0,
                 moedas: [{code: "BRL", name: "Real Brasileiro"}, {code: "USD", name: "Dolar Americano"}, {code: "AUD", name: "Dolar Australiano"}, {code: "CAD", name: "Dolar Canadense"}, {code: "EUR", name: "Euro"}, {code: "GBP", name: "Libra Esterlina"}],
@@ -57,9 +62,14 @@ class HomePage extends React.Component {
         if (target === "cripto") return this.setState({cripto: {...this.state.cripto, isOpen: false}});
     };
 
+    convert = () => {
+        this.setState({texto: {...this.state.texto, total: this.state.texto.text.length}});
+    };
+
     render() {
         return (
             <main>
+
                 <nav id="cripto" className="info" style={{opacity: this.state.cripto.isOpen ? 1 : 0}}>
                     <small className="close" onClick={() => this.closeMoreInfo("cripto")}>[ x ]</small>
                     <h1>O que é Bitcoin?</h1>
@@ -205,6 +215,43 @@ class HomePage extends React.Component {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                {/* TEXTO */}
+                <section className="grid">
+                    <div className="card">
+                        <p className="title">Total de Caracteres</p>
+                        <div className="column total-chars">
+                            <textarea 
+                                value={this.state.texto.text} 
+                                id="text" 
+                                placeholder="Cole ou digite aqui o seu texto" 
+                                rows="10" 
+                                onChange={e => this.setState({texto: {...this.state.text, text: e.target.value}})}
+                            />
+                            <div>
+                                <button className="blue" onClick={this.convert}>Contar Caracteres</button>
+                                <button onClick={() => this.setState({texto: {text: "", total: 0}})}>Limpar</button>
+                                <p className="res">Numero Total de Caracteres: {this.state.texto.total || 0}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <p className="title">Maiusculo p/ Minusculo</p>
+                        <div className="column">
+                            
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <p className="title">Voz do Google</p>
+                        <div className="column voice-google">
+                            <VozGoogle/>
                         </div>
                     </div>
                 </section>

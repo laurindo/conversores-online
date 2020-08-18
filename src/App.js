@@ -1,5 +1,6 @@
 import React from 'react';
 import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
+import Header from "./Header";
 import {createBrowserHistory} from "history";
 import ConversorCtoF from "./ConversorCtoF";
 import ConversorFtoC from "./ConversorFtoC";
@@ -7,6 +8,7 @@ import ConversorCtoK from "./ConversorCtoK";
 import ConversorKtoC from "./ConversorKtoC";
 
 import TextoTotalChars from "./TextoTotalChars";
+import VozGooglePage from "./VozGooglePage";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -14,7 +16,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header></header>
+      <Header/>
       <div className="content">
         <nav>
           <p className="menu-title">Conversores</p>
@@ -50,6 +52,9 @@ function App() {
               <a href="/#/texto/total-caracteres">Total de Caracteres</a>
             </li>
             <li>
+              <a href="/#/texto/voz-google">Voz do Google</a>
+            </li>
+            <li>
               <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
             </li>
             <li>
@@ -60,13 +65,14 @@ function App() {
         <main>
           <HashRouter history={createBrowserHistory()}>
             <Switch>
-            <Route exact path="/" component={HomePage}/>
+              <Route exact path="/" component={HomePage}/>
               <Route exact path="/converter/celsius-fahrenheit" component={ConversorCtoF}/>
               <Route exact path="/converter/fahrenheit-celsius" component={ConversorFtoC}/>
               <Route exact path="/converter/kelvin-celsius" component={ConversorKtoC}/>
               <Route exact path="/converter/celsius-kelvin" component={ConversorCtoK}/>
 
               <Route exact path="/texto/total-caracteres" component={TextoTotalChars}/>
+              <Route exact path="/texto/voz-google" component={VozGooglePage}/>
             </Switch>
           </HashRouter>
         </main>
