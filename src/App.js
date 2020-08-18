@@ -11,6 +11,7 @@ import TextoTotalChars from "./TextoTotalChars";
 import VozGooglePage from "./VozGooglePage";
 import TextoMaiusculo from "./TextoMaiusculo";
 import InverterTextPage from "./InverterTextPage";
+import GenerateRandomWordPage from "./GenerateRandomWordPage";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -71,6 +72,9 @@ function App() {
             <li>
               <a href="/#/texto/inverter">Inverter Texto</a>
             </li>
+            <li>
+              <a href="/#/texto/gerar-texto-randomico">Gerar Texto Randômico</a>
+            </li>
           </ol>
         </nav>
         <main>
@@ -88,6 +92,7 @@ function App() {
               <Route exact path="/texto/maiusculo" component={TextoMaiusculo}/>
               <Route exact path="/texto/voz-google" component={VozGooglePage}/>
               <Route exact path="/texto/inverter" component={InverterTextPage}/>
+              <Route exact path="/texto/gerar-texto-randomico" component={GenerateRandomWordPage}/>
             </Switch>
           </HashRouter>
         </main>

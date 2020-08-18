@@ -115,7 +115,7 @@ class HomePage extends React.Component {
                     </div>
 
                     <div className="card">
-                        <p className="title">Cripto Moedas</p>
+                        <p className="title">CriptoMoedas (cotação referente a 1 BTC)</p>
                         <div className="column">
                             <div className="list-moedas">
                                 {Object.values(this.state.cripto.quote).map((q, index) => (
@@ -141,7 +141,7 @@ class HomePage extends React.Component {
                     </div>
 
                     <div className="card">
-                        <p className="title">Nomes (use virgula para separar cada nome)</p>
+                        <p className="title">Sorteador de Nomes</p>
                         <div className="column">
                             <SortNames/>
                         </div>
