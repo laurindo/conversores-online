@@ -16,16 +16,16 @@ function App() {
           <p className="menu-title">Conversores</p>
           <ol>
             <li>
-              <a href="#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+              <a href="/conversores-online/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
             </li>
             <li>
-              <a href="#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+              <a href="/conversores-online/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
             </li>
             <li>
-              <a href="#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
+              <a href="/conversores-online/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
             </li>
             <li>
-              <a href="#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
+              <a href="/conversores-online/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
             </li>
           </ol>
         </nav>
