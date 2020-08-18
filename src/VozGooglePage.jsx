@@ -7,7 +7,7 @@ class VozGooglePage extends React.Component {
             <div>
                 <p>
                     Traduzir voz já foi algo muito mais complicado, mas graças ao nosso serviço de conversão de texto para audio ficou muito fácil.
-                    Você pode digitar algum texto e clicar em gerar audio para faezr download dao audio em mp3 e compartilhar com seus amigos.
+                    Você pode digitar algum texto e clicar em gerar audio para fazer download do áudio em mp3 e compartilhar com seus amigos.
                 </p>
 
                 <VozGoogle/>
