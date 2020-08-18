@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import VozGoogle from "./VozGoogle";
+import TextoMaiusculoComp from "./TextoMaiusculoComp";
+import ConversorMoeda from "./ConversorMoeda";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -27,10 +29,6 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
-        axios.get("https://economia.awesomeapi.com.br/json/all").then(res => {
-            this.setState({moedas: res.data});
-        });
-
         axios.get("https://blockchain.info/ticker").then(res => this.setState({
             cripto: {...this.state.cripto, quote: res.data, keys: Object.keys(res.data)},
         }));
@@ -90,31 +88,7 @@ class HomePage extends React.Component {
 
                 {/* MOEDAS */}
                 <section className="grid">
-                    <div className="card">
-                        <p className="title">Moeda</p>
-                        <div className="column">
-                            <label htmlFor="from" className="lb">Quero converter BRL</label>
-                            <input id="value" type="text" value={this.state.value} onChange={this.change}/>
-
-                            <label htmlFor="from" className="lb">Para</label>
-                            <select id="from" name="from" value={this.state.from} onChange={this.change}>
-                                {Object.values(this.state.moedas).map((moeda, index) => {
-                                    return (
-                                        <option key={index} value={moeda.code}>{moeda.name}({moeda.code})</option>
-                                    );
-                                })}
-                            </select>
-                            {/* <label htmlFor="to">Para</label>
-                            <select id="to" name="to" value={this.state.to} onChange={this.change}>
-                                {Object.values(this.state.moedas).map((moeda, index) => {
-                                    return (
-                                        <option key={index} value={moeda.code}>{moeda.name}({moeda.code})</option>
-                                    );
-                                })}
-                            </select> */}
-                            <p className="result">({this.state.from} - BRL): R$ {this.state.result}</p>
-                        </div>
-                    </div>
+                    <ConversorMoeda/>
 
                     <div className="card">
                         <p className="title">Bitcoin</p>
@@ -244,7 +218,7 @@ class HomePage extends React.Component {
                     <div className="card">
                         <p className="title">Maiusculo p/ Minusculo</p>
                         <div className="column">
-                            
+                            <TextoMaiusculoComp/>
                         </div>
                     </div>
 

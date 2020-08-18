@@ -6,9 +6,10 @@ import ConversorCtoF from "./ConversorCtoF";
 import ConversorFtoC from "./ConversorFtoC";
 import ConversorCtoK from "./ConversorCtoK";
 import ConversorKtoC from "./ConversorKtoC";
-
+import ConversorMoedaPage from "./ConversorMoedaPage";
 import TextoTotalChars from "./TextoTotalChars";
 import VozGooglePage from "./VozGooglePage";
+import TextoMaiusculo from "./TextoMaiusculo";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -37,13 +38,19 @@ function App() {
           <p className="menu-title">Cotações</p>
           <ol>
             <li>
-              <a href="/#/cotacao/dolar-real">Dólar para Real</a>
+              <a href="/#/cotacao/moeda?coin=USD">Dólar para Real</a>
             </li>
             <li>
-              <a href="/#/cotacao/euro-real">Euro para Real</a>
+              <a href="/#/cotacao/moeda?coin=EUR">Euro para Real</a>
             </li>
             <li>
-              <a href="/#/cotacao/libra-real">Libra para Real</a>
+              <a href="/#/cotacao/moeda?coin=GBP">Libra para Real</a>
+            </li>
+            <li>
+              <a href="/#/cotacao/moeda?coin=CAD">Dolar Canadense para Real</a>
+            </li>
+            <li>
+              <a href="/#/cotacao/moeda?coin=CAD">Mais Opções</a>
             </li>
           </ol>
           <p className="menu-title">Texto</p>
@@ -58,7 +65,7 @@ function App() {
               <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
             </li>
             <li>
-              <a href="/#/texto/minusculo">Converter p/ minúsculo</a>
+              <a href="/#/texto/maiusculo">Converter p/ minúsculo</a>
             </li>
           </ol>
         </nav>
@@ -71,7 +78,10 @@ function App() {
               <Route exact path="/converter/kelvin-celsius" component={ConversorKtoC}/>
               <Route exact path="/converter/celsius-kelvin" component={ConversorCtoK}/>
 
+              <Route exact path="/cotacao/moeda" component={ConversorMoedaPage}/>
+
               <Route exact path="/texto/total-caracteres" component={TextoTotalChars}/>
+              <Route exact path="/texto/maiusculo" component={TextoMaiusculo}/>
               <Route exact path="/texto/voz-google" component={VozGooglePage}/>
             </Switch>
           </HashRouter>
