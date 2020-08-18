@@ -44,7 +44,7 @@ class ConversorMoedaPage extends React.Component {
             <section>
                 <ConversorMoeda coin={this.state.from}/>
 
-                <h1 style={{"margin": "100px 0"}}>Você Sabia?</h1>
+                <h1 style={{"margin": "100px 0 20px"}}>Você Sabia?</h1>
                 <p>
                     Câmbio é a relação entre duas moedas diferentes, ou seja, o quão valorizada uma está em relação a outra
                 </p>
