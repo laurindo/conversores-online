@@ -5,6 +5,9 @@ import ConversorCtoF from "./ConversorCtoF";
 import ConversorFtoC from "./ConversorFtoC";
 import ConversorCtoK from "./ConversorCtoK";
 import ConversorKtoC from "./ConversorKtoC";
+
+import TextoTotalChars from "./TextoTotalChars";
+
 import HomePage from "./HomePage";
 import './App.css';
 
@@ -41,6 +44,18 @@ function App() {
               <a href="/conversores-online/#/cotacao/libra-real">Libra para Real</a>
             </li>
           </ol>
+          <p className="menu-title">Texto</p>
+          <ol>
+            <li>
+              <a href="/conversores-online/#/texto/total-caracteres">Total de Caracteres</a>
+            </li>
+            <li>
+              <a href="/conversores-online/#/texto/maiusculo">Converter p/ maiúsculo</a>
+            </li>
+            <li>
+              <a href="/conversores-online/#/cotacao/minusculo">Converter p/ minúsculo</a>
+            </li>
+          </ol>
         </nav>
         <main>
           <HashRouter history={createBrowserHistory()}>
@@ -50,6 +65,8 @@ function App() {
               <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
               <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
               <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
+
+              <Route exact path="/texto/total-caracteres" component={TextoTotalChars}/>
             </Switch>
           </HashRouter>
         </main>
