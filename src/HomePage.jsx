@@ -3,6 +3,8 @@ import axios from "axios";
 import VozGoogle from "./VozGoogle";
 import TextoMaiusculoComp from "./TextoMaiusculoComp";
 import ConversorMoeda from "./ConversorMoeda";
+import InverterText from "./InverterText";
+import SortNames from "./SortNames";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -128,52 +130,19 @@ class HomePage extends React.Component {
                 </section>
 
 
-                {/* COMPRIMENTO e VOLUME */}
+                {/* TEXTO */}
                 <section className="grid">
                     <div className="card">
-                        <p className="title">Comprimento</p>
+                        <p className="title">Inverter Texto</p>
                         <div className="column">
-                            <label htmlFor="from" className="lb">Quero converter:</label>
-                            <input id="value" type="text" value={this.state.value} onChange={this.change}/>
-
-                            <label htmlFor="from" className="lb">Para</label>
-                            <select id="from" name="from" value={this.state.from} onChange={this.change}>
-                                {Object.values(this.state.moedas).map((moeda, index) => {
-                                    return (
-                                        <option key={index} value={moeda.code}>{moeda.name}({moeda.code})</option>
-                                    );
-                                })}
-                            </select>
-                            {/* <label htmlFor="to">Para</label>
-                            <select id="to" name="to" value={this.state.to} onChange={this.change}>
-                                {Object.values(this.state.moedas).map((moeda, index) => {
-                                    return (
-                                        <option key={index} value={moeda.code}>{moeda.name}({moeda.code})</option>
-                                    );
-                                })}
-                            </select> */}
-                            <p className="result">({this.state.from} - BRL): R$ {this.state.result}</p>
+                            <InverterText/>
                         </div>
                     </div>
 
                     <div className="card">
-                        <p className="title">Bitcoin</p>
+                        <p className="title">Nomes (use virgula para separar cada nome)</p>
                         <div className="column">
-                            <label className="lb">Quero converter Bitcoin (BTC)</label>
-                            <input id="value" type="text" value={this.state.cripto.value} onChange={this.changeCripto}/>
-                            
-                            <label htmlFor="to" className="lb">Para</label>
-                            <select id="to" name="to" value={this.state.cripto.to} onChange={this.changeCripto}>
-                                {this.state.cripto.moedas.map((moeda, index) => {
-                                    return (
-                                        <option key={index} value={moeda.code}>{moeda.name}({moeda.code})</option>
-                                    );
-                                })}
-                            </select>
-                            <p className="result">{this.state.cripto.to} {this.state.cripto.result}</p>
-                        </div>
-                        <div className="actions">
-                            <button onClick={() => this.openMoreInfo("cripto")}>Mais Informações</button>
+                            <SortNames/>
                         </div>
                     </div>
 

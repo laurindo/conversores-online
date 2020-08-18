@@ -10,6 +10,7 @@ import ConversorMoedaPage from "./ConversorMoedaPage";
 import TextoTotalChars from "./TextoTotalChars";
 import VozGooglePage from "./VozGooglePage";
 import TextoMaiusculo from "./TextoMaiusculo";
+import InverterTextPage from "./InverterTextPage";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -67,6 +68,9 @@ function App() {
             <li>
               <a href="/#/texto/maiusculo">Converter p/ minúsculo</a>
             </li>
+            <li>
+              <a href="/#/texto/inverter">Inverter Texto</a>
+            </li>
           </ol>
         </nav>
         <main>
@@ -83,6 +87,7 @@ function App() {
               <Route exact path="/texto/total-caracteres" component={TextoTotalChars}/>
               <Route exact path="/texto/maiusculo" component={TextoMaiusculo}/>
               <Route exact path="/texto/voz-google" component={VozGooglePage}/>
+              <Route exact path="/texto/inverter" component={InverterTextPage}/>
             </Switch>
           </HashRouter>
         </main>
