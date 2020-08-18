@@ -44,7 +44,7 @@ class ConversorMoedaPage extends React.Component {
             <section>
                 <ConversorMoeda coin={this.state.from}/>
 
-                <h1>Você Sabia?</h1>
+                <h1 style={{margin: "100px"}}>Você Sabia?</h1>
                 <p>
                     Câmbio é a relação entre duas moedas diferentes, ou seja, o quão valorizada uma está em relação a outra
                 </p>
@@ -96,16 +96,16 @@ Se você já comprou dólares para alguma viagem aos EUA, provavelmente se surpr
                 A taxa de câmbio não é definida pelo governo. Ela varia de acordo com o movimento do mercado, com a lei da oferta e da demanda, além da procura de dólares no Brasil. Nesse cenário, o Banco Central intervém quando o valor da moeda atinge alta e baixa volatilidade durante o pregão. Veja algumas variáveis que alteram os valores da moeda.
                 </p>
 
-                <h6>
+                <h4>
                 Superávit ou déficit comercial
-                </h6>
+                </h4>
                 <p>
                 O superávit ocorre quando o saldo das exportações é maior que o de importações. Por outro lado, quando ocorre o contrário, temos o chamado déficit comercial.
                 </p>
 
-                <h6>
+                <h4>
                 Gastos de turistas estrangeiros ou gastos de brasileiros no exterior
-                </h6>
+                </h4>
                 <p>
                 Os gastos no exterior são mais um termômetro para medir se a moeda nacional está alta ou não. Quando desvalorizada, os brasileiros tendem a consumir menos no exterior. Quando em alta, o poder de compra dos consumidores aumenta e espera-se um maior nível de gastos no exterior.
                 </p>
