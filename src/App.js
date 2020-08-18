@@ -1,24 +1,45 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Router, Switch, Route} from "react-router-dom";
+import {createBrowserHistory} from "history";
+import ConversorCtoF from "./ConversorCtoF";
+import ConversorFtoC from "./ConversorFtoC";
+import ConversorCtoK from "./ConversorCtoK";
+import ConversorKtoC from "./ConversorKtoC";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <header></header>
+      <div className="content">
+        <nav>
+          <p className="menu-title">Convesores</p>
+          <ol>
+            <li>
+              <a href="/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+            </li>
+            <li>
+              <a href="/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+            </li>
+            <li>
+              <a href="/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
+            </li>
+            <li>
+              <a href="/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
+            </li>
+          </ol>
+        </nav>
+        <main>
+          <Router history={createBrowserHistory()}>
+            <Switch>
+              <Route exact path="/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
+              <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
+              <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
+              <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
+            </Switch>
+          </Router>
+        </main>
+      </div>
     </div>
   );
 }
