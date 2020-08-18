@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Switch, Route} from "react-router-dom";
+import {HashRouter, Switch, Route} from "react-router-dom";
 import {createBrowserHistory} from "history";
 import ConversorCtoF from "./ConversorCtoF";
 import ConversorFtoC from "./ConversorFtoC";
@@ -16,28 +16,28 @@ function App() {
           <p className="menu-title">Convesores</p>
           <ol>
             <li>
-              <a href="/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+              <a href="/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
             </li>
             <li>
-              <a href="/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+              <a href="/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
             </li>
             <li>
-              <a href="/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
+              <a href="/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
             </li>
             <li>
-              <a href="/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
+              <a href="/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
             </li>
           </ol>
         </nav>
         <main>
-          <Router history={createBrowserHistory()}>
+          <HashRouter history={createBrowserHistory()}>
             <Switch>
-              <Route exact path="/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
-              <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
-              <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
-              <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
+              <Route exact path="/#/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
+              <Route exact path="/#/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
+              <Route exact path="/#/coverter/kelvin-celsius" component={ConversorKtoC}/>
+              <Route exact path="/#/coverter/celsius-kelvin" component={ConversorCtoK}/>
             </Switch>
-          </Router>
+          </HashRouter>
         </main>
       </div>
     </div>
