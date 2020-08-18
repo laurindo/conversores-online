@@ -5,7 +5,7 @@ class ConversorKtoC extends React.Component {
         super(props);
         debugger;
         this.state = {
-            celsius: -273.15,
+            celsius: -273.5,
             kelvin: 0
         };
     }
@@ -28,7 +28,7 @@ class ConversorKtoC extends React.Component {
             <div>
                 <div className="conversor">
                     <div>
-                        <label>kelvin (K)</label>
+                        <label>Kelvin (K)</label>
                         <input id="kelvin" type="number" value={this.state.kelvin} onChange={this.change}/>
                     </div>
                     <p className="equals">=</p>

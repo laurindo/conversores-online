@@ -5,7 +5,7 @@ class ConversorCtoK extends React.Component {
         super(props);
         debugger;
         this.state = {
-            kelvin: -273.15,
+            kelvin: 273.15,
             celsius: 0
         };
     }
