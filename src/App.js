@@ -20,40 +20,40 @@ function App() {
           <p className="menu-title">Conversores</p>
           <ol>
             <li>
-              <a href="/conversores-online/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+              <a href="/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
             </li>
             <li>
-              <a href="/conversores-online/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+              <a href="/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
             </li>
             <li>
-              <a href="/conversores-online/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
+              <a href="/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
             </li>
             <li>
-              <a href="/conversores-online/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
+              <a href="/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
             </li>
           </ol>
           <p className="menu-title">Cotações</p>
           <ol>
             <li>
-              <a href="/conversores-online/#/cotacao/dolar-real">Dólar para Real</a>
+              <a href="/#/cotacao/dolar-real">Dólar para Real</a>
             </li>
             <li>
-              <a href="/conversores-online/#/cotacao/euro-real">Euro para Real</a>
+              <a href="/#/cotacao/euro-real">Euro para Real</a>
             </li>
             <li>
-              <a href="/conversores-online/#/cotacao/libra-real">Libra para Real</a>
+              <a href="/#/cotacao/libra-real">Libra para Real</a>
             </li>
           </ol>
           <p className="menu-title">Texto</p>
           <ol>
             <li>
-              <a href="/conversores-online/#/texto/total-caracteres">Total de Caracteres</a>
+              <a href="/#/texto/total-caracteres">Total de Caracteres</a>
             </li>
             <li>
-              <a href="/conversores-online/#/texto/maiusculo">Converter p/ maiúsculo</a>
+              <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
             </li>
             <li>
-              <a href="/conversores-online/#/cotacao/minusculo">Converter p/ minúsculo</a>
+              <a href="/#/cotacao/minusculo">Converter p/ minúsculo</a>
             </li>
           </ol>
         </nav>
