@@ -3,15 +3,14 @@ import React from "react";
 class TextoTotalChars extends React.Component {
     constructor(props) {
         super(props);
-        debugger;
         this.state = {
-            celsius: 0,
-            fahrenheit: 32
+            text: "",
+            total: 0
         };
     }
 
-    convertNumber = value => {
-        return parseFloat(value.match( /\d+/g ).join(''));
+    convert = () => {
+        this.setState({total: this.state.text.length});
     };
 
     render() {
@@ -22,12 +21,17 @@ class TextoTotalChars extends React.Component {
 Quer se trate de Snapchat, Twitter, Facebook ou somente uma nota para colegas de trabalho ou funcionários empresariais, o número de caracteres totais é importante. O que é dito pode não ser tão importante quanto a forma como é dito ou o número de caracteres usados.
 </h1>
 
-                <div>
+                <div className="total-chars">
                     <p>Escreve o cole o texto nesse online contador de caracteres:</p>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea value={this.state.text} id="text" placeholder="Cole ou digite aqui o seu texto" cols="30" rows="10" onChange={e => this.setState({text: e.target.value})}></textarea>
+                    <div>
+                        <button className="blue" onClick={this.convert}>Contar Caracteres</button>
+                        <button onClick={() => this.setState({text: "", total: 0})}>Limpar</button>
+                        <p className="res">Numero Total de Caracteres: {this.state.total}</p>
+                    </div>
                 </div>
 
-                <div>
+                <div style={{"margin": "200px 0"}}>
                     <h4 class="topicTitles">Limites de caracteres do Facebook:</h4>
                     <p>
                         Como qualquer outro site de redes sociais, o Facebook tem requisitos de comprimento quando se trata de escrever no Facebook, no seu estado, mensagens e comentários. Compreender quantos caracteres podem ser usados, permite o uso efetivo do Facebook como uma ferramenta comercial ou de campanha.<br/>
@@ -48,7 +52,7 @@ Quer se trate de Snapchat, Twitter, Facebook ou somente uma nota para colegas de
                         <br/>
                         Para resumir os limites de caracteres do Facebook:
                     </p>
-                    <ul style="margin-left:50px">
+                    <ul style={{"margin-left": "50px"}}>
 						<li>sistema de mensagens / mensageiro privado: 20.000 caracteres no total para uma única mensagem</li>
 						<li>status / postagens no mural / feed de notícias em postagens longas: 63.206 caracteres no máximo</li>
 						<li>descrições de imagens: menos de 63.206 caracteres <br/>[63.206 - o tamanho da imagem (por exemplo, 2.048 ou qualquer tamanho) = mais ou menos 60.000 caracteres]</li>
@@ -58,9 +62,9 @@ Quer se trate de Snapchat, Twitter, Facebook ou somente uma nota para colegas de
 					  </ul>
 
                       <h4 class="topicTitles">Como as letras são escritas e contabilizadas</h4>
-                      <p>Na sociedade atual e moderna, as letras vêm em todas as formas. Usamos letras para nos comunicarmos com outras pessoas em qualquer lugar do mundo. No mundo dos negócios, os funcionários criam letras comerciais numa dada altura e incluem a contagem dos caracteres. Para simplificarem a sua vida, as pessoas utilizam software para escrever no documento e contar o número de palavras e caracteres que usam. Outra forma de <a href="https://www.quantasletras.com/">contar o número de caracteres</a> ou palavras em letras é através dum contador de caracteres on-line.</p>
-                      <p>Quando um texto ou artigo está escrito, é importante conhecer o <a href="https://www.quantasletras.com/">número de caracteres ou letras</a>. Sabemos que temos que expressar o que sentimos e como deve ser retratado. E pode não ser fácil contar o número exato de letras, especialmente se for feito manualmente. Se a contagem de caracteres for necessária, pode parecer uma tarefa chata e assustadora. No entanto, existem programas ou contadores de caracteres para fazer a contagem para você. Desta forma, escrever o que é necessário é simples e o software fará toda a contagem dos caracteres.</p>
-                      <p>Depois de você escrever um artigo ou texto, permita que o programa conte o número de caracteres que foram escritos. Isso deve dar uma ideia da contagem, e <a href="https://www.quantasletras.com/">quantas letras</a> ainda precisam ser escritas. Lembre-se sempre que a contagem de caracteres inclui todos os caracteres numa frase e não somente as letras. É assim que os sites contam os caracteres quando têm um limite no tamanho do texto, muitas vezes incluindo os espaços entre as letras.</p>
+                      <p>Na sociedade atual e moderna, as letras vêm em todas as formas. Usamos letras para nos comunicarmos com outras pessoas em qualquer lugar do mundo. No mundo dos negócios, os funcionários criam letras comerciais numa dada altura e incluem a contagem dos caracteres. Para simplificarem a sua vida, as pessoas utilizam software para escrever no documento e contar o número de palavras e caracteres que usam. Outra forma de <a href="https://conversoronlline.com/">contar o número de caracteres</a> ou palavras em letras é através dum contador de caracteres on-line.</p>
+                      <p>Quando um texto ou artigo está escrito, é importante conhecer o <a href="https://conversoronlline.com/">número de caracteres ou letras</a>. Sabemos que temos que expressar o que sentimos e como deve ser retratado. E pode não ser fácil contar o número exato de letras, especialmente se for feito manualmente. Se a contagem de caracteres for necessária, pode parecer uma tarefa chata e assustadora. No entanto, existem programas ou contadores de caracteres para fazer a contagem para você. Desta forma, escrever o que é necessário é simples e o software fará toda a contagem dos caracteres.</p>
+                      <p>Depois de você escrever um artigo ou texto, permita que o programa conte o número de caracteres que foram escritos. Isso deve dar uma ideia da contagem, e <a href="https://conversoronlline.com/">quantas letras</a> ainda precisam ser escritas. Lembre-se sempre que a contagem de caracteres inclui todos os caracteres numa frase e não somente as letras. É assim que os sites contam os caracteres quando têm um limite no tamanho do texto, muitas vezes incluindo os espaços entre as letras.</p>
                 </div>
 
             </div>

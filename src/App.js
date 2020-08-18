@@ -20,16 +20,16 @@ function App() {
           <p className="menu-title">Conversores</p>
           <ol>
             <li>
-              <a href="/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
+              <a href="/#/converter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
             </li>
             <li>
-              <a href="/#/coverter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
+              <a href="/#/converter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
             </li>
             <li>
-              <a href="/#/coverter/kelvin-celsius">Kelvin p/ Celsius</a>
+              <a href="/#/converter/kelvin-celsius">Kelvin p/ Celsius</a>
             </li>
             <li>
-              <a href="/#/coverter/celsius-kelvin">Celsius p/ Kelvin</a>
+              <a href="/#/converter/celsius-kelvin">Celsius p/ Kelvin</a>
             </li>
           </ol>
           <p className="menu-title">Cotações</p>
@@ -53,7 +53,7 @@ function App() {
               <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
             </li>
             <li>
-              <a href="/#/cotacao/minusculo">Converter p/ minúsculo</a>
+              <a href="/#/texto/minusculo">Converter p/ minúsculo</a>
             </li>
           </ol>
         </nav>
@@ -61,10 +61,10 @@ function App() {
           <HashRouter history={createBrowserHistory()}>
             <Switch>
             <Route exact path="/" component={HomePage}/>
-              <Route exact path="/coverter/celsius-fahrenheit" component={ConversorCtoF}/>
-              <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
-              <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
-              <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
+              <Route exact path="/converter/celsius-fahrenheit" component={ConversorCtoF}/>
+              <Route exact path="/converter/fahrenheit-celsius" component={ConversorFtoC}/>
+              <Route exact path="/converter/kelvin-celsius" component={ConversorKtoC}/>
+              <Route exact path="/converter/celsius-kelvin" component={ConversorCtoK}/>
 
               <Route exact path="/texto/total-caracteres" component={TextoTotalChars}/>
             </Switch>

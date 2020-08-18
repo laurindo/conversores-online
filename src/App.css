@@ -174,3 +174,31 @@ textarea {
   width: 80%;
   padding: 20px;
 }
+
+.total-chars {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-chars button {
+  padding: 10px 20px;
+  border: 0;
+  margin: 10px 0;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.total-chars button.blue {
+  background-color: #0c74e0;
+  color: #fff;
+}
+
+.total-chars .res {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+  color: #0d66c3;
+  font-weight: 700;
+}
