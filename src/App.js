@@ -13,7 +13,7 @@ function App() {
       <header></header>
       <div className="content">
         <nav>
-          <p className="menu-title">Convesores</p>
+          <p className="menu-title">Conversores</p>
           <ol>
             <li>
               <a href="/#/coverter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
