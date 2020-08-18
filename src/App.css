@@ -1,3 +1,7 @@
+main {
+  padding: 10px;
+}
+
 .content {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -79,4 +83,42 @@ h1 {
 .topic {
   font-weight: 700;
   margin-top: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: #dcdcdc 0px 7px 15px 0px;
+  border: solid 1px #e4e4e4;
+}
+
+.card .title {
+  font-weight: bold;
+}
+
+.card label {
+  margin-bottom: 5px;
+}
+
+.card select {
+  margin: 10px 0;
+}
+
+.card .result {
+  text-align: right;
+  background-color: aliceblue;
+  padding: 10px 5px;
+  border-radius: 5px;
 }
