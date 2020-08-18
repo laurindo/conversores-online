@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Switch, Route} from "react-router-dom";
+import {HashRouter, Switch, Route, Redirect} from "react-router-dom";
 import {createBrowserHistory} from "history";
 import ConversorCtoF from "./ConversorCtoF";
 import ConversorFtoC from "./ConversorFtoC";
@@ -36,6 +36,7 @@ function App() {
               <Route exact path="/coverter/fahrenheit-celsius" component={ConversorFtoC}/>
               <Route exact path="/coverter/kelvin-celsius" component={ConversorKtoC}/>
               <Route exact path="/coverter/celsius-kelvin" component={ConversorCtoK}/>
+              <Redirect to="/conversores-online/#/coverter/celsius-fahrenheit"/>
             </Switch>
           </HashRouter>
         </main>
