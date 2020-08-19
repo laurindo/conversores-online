@@ -32,6 +32,7 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
+
         axios.get("https://blockchain.info/ticker").then(res => this.setState({
             cripto: {...this.state.cripto, quote: res.data, keys: Object.keys(res.data)},
         }));
@@ -70,6 +71,8 @@ class HomePage extends React.Component {
     render() {
         return (
             <main>
+
+
 
                 <nav id="cripto" className="info" style={{opacity: this.state.cripto.isOpen ? 1 : 0}}>
                     <small className="close" onClick={() => this.closeMoreInfo("cripto")}>[ x ]</small>
