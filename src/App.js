@@ -12,6 +12,7 @@ import VozGooglePage from "./VozGooglePage";
 import TextoMaiusculo from "./TextoMaiusculo";
 import InverterTextPage from "./InverterTextPage";
 import GenerateRandomWordPage from "./GenerateRandomWordPage";
+import LoteriaPage from "./LoteriaPage";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -76,6 +77,18 @@ function App() {
               <a href="/#/texto/gerar-texto-randomico">Gerar Texto Randômico</a>
             </li>
           </ol>
+          <p className="menu-title">Loteria (Gerador de números)</p>
+          <ol>
+            <li>
+              <a href="/#/loteria/lotofacil">Lotofacil</a>
+            </li>
+            <li>
+              <a href="/#/loteria/lotomania">Lotomania</a>
+            </li>
+            <li>
+              <a href="/#/loteria/quina">Quina</a>
+            </li>
+          </ol>
         </nav>
         <main>
           <HashRouter history={createBrowserHistory()}>
@@ -93,6 +106,10 @@ function App() {
               <Route exact path="/texto/voz-google" component={VozGooglePage}/>
               <Route exact path="/texto/inverter" component={InverterTextPage}/>
               <Route exact path="/texto/gerar-texto-randomico" component={GenerateRandomWordPage}/>
+
+              <Route exact path="/loteria/lotofacil" component={LoteriaPage}/>
+
+
             </Switch>
           </HashRouter>
         </main>

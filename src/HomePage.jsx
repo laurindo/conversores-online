@@ -6,6 +6,7 @@ import ConversorMoeda from "./ConversorMoeda";
 import InverterText from "./InverterText";
 import SortNames from "./SortNames";
 import GenerateRandomWord from "./GenerateRandomWord";
+import Lotofacil from "./Lotofacil";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -193,6 +194,13 @@ class HomePage extends React.Component {
                             <VozGoogle/>
                         </div>
                     </div>
+                </section>
+
+                {/* LOTERIA */}
+                <section className="grid">
+                    <Lotofacil lotofacil/>
+                    <Lotofacil quina/>
+                    <Lotofacil lotomania/>
                 </section>
 
 
