@@ -283,3 +283,12 @@ footer {
   font-size: 30px;
   border-radius: 5px;
 }
+
+.asc-image {
+  font-family: monospace;
+  font-size: 3px;
+}
+
+.five-column {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

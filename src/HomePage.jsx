@@ -33,7 +33,6 @@ class HomePage extends React.Component {
     }
 
     componentDidMount() {
-
         axios.get("https://blockchain.info/ticker").then(res => this.setState({
             cripto: {...this.state.cripto, quote: res.data, keys: Object.keys(res.data)},
         }));

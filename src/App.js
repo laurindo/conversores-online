@@ -13,6 +13,7 @@ import TextoMaiusculo from "./TextoMaiusculo";
 import InverterTextPage from "./InverterTextPage";
 import GenerateRandomWordPage from "./GenerateRandomWordPage";
 import LoteriaPage from "./LoteriaPage";
+import NeymarTextoPage from "./NeymarTextoPage";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -89,6 +90,12 @@ function App() {
               <a href="/#/loteria/quina">Quina</a>
             </li>
           </ol>
+          <p className="menu-title">Neymar (Gerar imagem para texto)</p>
+          <ol>
+            <li>
+              <a href="/#/neymar/texto">Neymar Avatar em Texto</a>
+            </li>
+          </ol>
         </nav>
         <main>
           <HashRouter history={createBrowserHistory()}>
@@ -108,6 +115,8 @@ function App() {
               <Route exact path="/texto/gerar-texto-randomico" component={GenerateRandomWordPage}/>
 
               <Route exact path="/loteria/lotofacil" component={LoteriaPage}/>
+
+              <Route exact path="/neymar/texto" component={NeymarTextoPage}/>
 
 
             </Switch>
