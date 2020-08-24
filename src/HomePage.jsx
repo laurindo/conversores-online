@@ -72,8 +72,6 @@ class HomePage extends React.Component {
         return (
             <main>
 
-
-
                 <nav id="cripto" className="info" style={{opacity: this.state.cripto.isOpen ? 1 : 0}}>
                     <small className="close" onClick={() => this.closeMoreInfo("cripto")}>[ x ]</small>
                     <h1>O que é Bitcoin?</h1>
@@ -217,64 +215,6 @@ class HomePage extends React.Component {
                     </p>
                 </section>
 
-                <footer>
-                    <div>
-                        <ol>
-                        <li>
-                        <a href="/#/converter/celsius-fahrenheit">Celsius p/ Fahrenheit</a>
-                        </li>
-                        <li>
-                        <a href="/#/converter/fahrenheit-celsius">Fahrenheit p/ Celsius</a>
-                        </li>
-                        <li>
-                        <a href="/#/converter/kelvin-celsius">Kelvin p/ Celsius</a>
-                        </li>
-                        <li>
-                        <a href="/#/converter/celsius-kelvin">Celsius p/ Kelvin</a>
-                        </li>
-                        </ol>
-                    </div>
-
-                    <div>
-                        <ol>
-                        <li>
-                        <a href="/#/cotacao/moeda?coin=USD">Dólar para Real</a>
-                        </li>
-                        <li>
-                        <a href="/#/cotacao/moeda?coin=EUR">Euro para Real</a>
-                        </li>
-                        <li>
-                        <a href="/#/cotacao/moeda?coin=GBP">Libra para Real</a>
-                        </li>
-                        <li>
-                        <a href="/#/cotacao/moeda?coin=CAD">Dolar Canadense para Real</a>
-                        </li>
-                        <li>
-                        <a href="/#/cotacao/moeda?coin=CAD">Mais Opções</a>
-                        </li>
-                        </ol>
-                    </div>
-
-                    <div>
-                        <ol>
-                        <li>
-                        <a href="/#/texto/total-caracteres">Total de Caracteres</a>
-                        </li>
-                        <li>
-                        <a href="/#/texto/voz-google">Voz do Google</a>
-                        </li>
-                        <li>
-                        <a href="/#/texto/maiusculo">Converter p/ maiúsculo</a>
-                        </li>
-                        <li>
-                        <a href="/#/texto/maiusculo">Converter p/ minúsculo</a>
-                        </li>
-                        <li>
-                        <a href="/#/texto/inverter">Inverter Texto</a>
-                        </li>
-                        </ol>
-                    </div>
-                </footer>
                 <div className="f center">
                     Conversor Online &bull; {new Date().getFullYear()} 
                 </div>

@@ -13,6 +13,7 @@ import TextoMaiusculo from "./TextoMaiusculo";
 import InverterTextPage from "./InverterTextPage";
 import GenerateRandomWordPage from "./GenerateRandomWordPage";
 import LoteriaPage from "./LoteriaPage";
+import DataPage from "./DataPage";
 import NeymarTextoPage from "./NeymarTextoPage";
 
 import HomePage from "./HomePage";
@@ -78,6 +79,17 @@ function App() {
               <a href="/#/texto/gerar-texto-randomico">Gerar Texto Randômico</a>
             </li>
           </ol>
+          
+          <p className="menu-title">Data</p>
+          <ol>
+            <li>
+              <a href="/#/data/anos-em-horas">Anos em (dias/horas/minutos)</a>
+            </li>
+            <li>
+              <a href="/#/data/qual-minha-idade">Qual a minha idade</a>
+            </li>
+          </ol>
+
           <p className="menu-title">Loteria (Gerador de números)</p>
           <ol>
             <li>
@@ -116,6 +128,8 @@ function App() {
 
               <Route exact path="/loteria/lotofacil" component={LoteriaPage}/>
 
+              <Route exact path="/data/anos-em-horas" component={DataPage}/>
+              
               <Route exact path="/neymar/texto" component={NeymarTextoPage}/>
 
 
