@@ -7,6 +7,7 @@ import InverterText from "./InverterText";
 import SortNames from "./SortNames";
 import GenerateRandomWord from "./GenerateRandomWord";
 import Lotofacil from "./Lotofacil";
+import Privacy from "./Privacy";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -216,7 +217,7 @@ class HomePage extends React.Component {
                 </section>
 
                 <div className="f center">
-                    Conversor Online &bull; {new Date().getFullYear()} 
+                    Conversor Online &bull; {new Date().getFullYear()}
                 </div>
             </main>
         );

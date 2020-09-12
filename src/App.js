@@ -15,6 +15,7 @@ import GenerateRandomWordPage from "./GenerateRandomWordPage";
 import LoteriaPage from "./LoteriaPage";
 import DataPage from "./DataPage";
 import NeymarTextoPage from "./NeymarTextoPage";
+import Privacy from "./Privacy";
 
 import HomePage from "./HomePage";
 import './App.css';
@@ -131,6 +132,7 @@ function App() {
               <Route exact path="/data/anos-em-horas" component={DataPage}/>
               
               <Route exact path="/neymar/texto" component={NeymarTextoPage}/>
+              <Route exact path="/privacidade" component={Privacy}/>
 
 
             </Switch>
